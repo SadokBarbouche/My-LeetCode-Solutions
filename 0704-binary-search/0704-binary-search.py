@@ -5,6 +5,8 @@ class Solution:
         i = 0
         for i in range(start,end):
             middle = (end - start )//2
+            if start == end:
+                return -1
             if nums[i] == target:
                 return i
             elif nums[i] < nums[middle]:
