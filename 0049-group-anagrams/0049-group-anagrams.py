@@ -5,7 +5,4 @@ class Solution:
         d = {i:[] for i in set(s)}
         for i in z:
             d[i[1]].append(i[0])
-        ans = []
-        for i in d.values():
-            ans.append(i)
-        return ans
+        return d.values()
