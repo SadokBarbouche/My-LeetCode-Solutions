@@ -1,3 +1,8 @@
 class Solution:
     def addDigits(self, num: int) -> int:
-        return 1 + (num - 1) % 9 if num else 0
+        size = len(str(num))
+        while size > 1:
+            ans = sum(int(i) for i in str(num))
+            num = ans
+            size = len(str(num))
+        return num
