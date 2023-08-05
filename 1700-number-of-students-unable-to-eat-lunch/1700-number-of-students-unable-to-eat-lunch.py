@@ -4,7 +4,7 @@ class Solution:
     def countStudents(self, students: List[int], sandwiches: List[int]) -> int:
         n = len(students)
         ans = 0
-        for _ in range(50*n):
+        for _ in range(10*n):
             if len(students) == 0:
                 break
             if students[0] != sandwiches[0]:
