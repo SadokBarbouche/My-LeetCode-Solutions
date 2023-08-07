@@ -1,18 +1,13 @@
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        expanded = []
-        for row in matrix:
-            expanded.extend(row)
+        row = len(matrix)-1
+        col = 0
         
-        low = 0
-        high = len(expanded) - 1
-        while low <= high:
-            mid = (low + high)
-            if expanded[mid] > target:
-                high = mid - 1
-            elif expanded[mid] < target:
-                low = mid + 1
-            else:
+        while row >= 0 and col < len(matrix[0]):
+            if matrix[row][col] == target:
                 return True
-        
+            elif matrix[row][col] > target:
+                row-=1
+            else:
+                col+=1
         return False
