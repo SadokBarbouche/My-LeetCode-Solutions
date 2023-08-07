@@ -1,6 +1,6 @@
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        row = len(matrix)-1
+        row = len(matrix) - 1
         col = 0
         
         while row >= 0 and col < len(matrix[0]):
