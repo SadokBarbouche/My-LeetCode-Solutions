@@ -7,10 +7,6 @@
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-        
-        return self.findLCA(root, p, q)
-    
-    def findLCA(self, root, p, q):
         if root is None:
             return None
         
@@ -23,6 +19,6 @@ class Solution:
             return q
         
         if p.val < root.val:
-            return self.findLCA(root.left, p, q)
+            return self.lowestCommonAncestor(root.left, p, q)
         else:
-            return self.findLCA(root.right, p, q)
+            return self.lowestCommonAncestor(root.right, p, q)
