@@ -19,8 +19,8 @@ class Solution:
             else:
                 return root
         
-        search_p, parent_p = search(root, p.val), None
-        search_q, parent_q = search(root, q.val), None
+        search_p = search(root, p.val)
+        search_q = search(root, q.val)
         
         if search_p is None or search_q is None:
             return None
