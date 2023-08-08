@@ -8,24 +8,7 @@
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         
-        def search(root, val):
-            if root is None: 
-                return None
-            
-            if val > root.val:
-                return search(root.right, val)
-            elif val < root.val:
-                return search(root.left, val)
-            else:
-                return root
-        
-        search_p = search(root, p.val)
-        search_q = search(root, q.val)
-        
-        if search_p is None or search_q is None:
-            return None
-        
-        return self.findLCA(root, search_p, search_q)
+        return self.findLCA(root, p, q)
     
     def findLCA(self, root, p, q):
         if root is None:
