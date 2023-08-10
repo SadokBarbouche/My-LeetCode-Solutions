@@ -9,7 +9,6 @@ class Solution:
         queue = deque()
         if root:
             queue.append(root)
-        level = 0
         ans = []
         while len(queue) > 0:
             to_add = []
@@ -20,7 +19,6 @@ class Solution:
                     queue.append(curr.left)
                 if curr.right:
                     queue.append(curr.right)
-            level += 1
             ans.append(to_add)
         return ans
         
