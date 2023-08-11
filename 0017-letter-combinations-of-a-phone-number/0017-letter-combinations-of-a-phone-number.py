@@ -5,7 +5,7 @@ class Solution:
             if digit <= 6:
                 for i in range(3):
                     letters.append(chr(ord('a')+3*(digit-2)+i)) 
-            if digit == 7:
+            elif digit == 7:
                 letters = ['p','q','r','s']
             elif digit == 8:
                 letters = ['t','u','v']
