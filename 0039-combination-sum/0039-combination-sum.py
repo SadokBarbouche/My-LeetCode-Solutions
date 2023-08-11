@@ -4,7 +4,7 @@ class Solution:
         path = []
         def dfs(index,candidates,target):
             if target == 0:
-                ans.append(path[:])
+                ans.append(path.copy())
                 return 
             if target < 0 or index >= len(candidates):
                 return
