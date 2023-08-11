@@ -6,7 +6,7 @@ class Solution:
             if target == 0:
                 ans.append(path.copy())
                 return 
-            if target < 0 or index == len(candidates):
+            if target < 0 or index >= len(candidates):
                 return
             path.append(candidates[index])            
             dfs(index,candidates,target - candidates[index])
