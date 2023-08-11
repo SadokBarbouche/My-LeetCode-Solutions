@@ -1,11 +1,16 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
-        n = len(nums)
-        permutations = []
-        for i in range(2**n):
-            perm = []
-            for j in range(n):
-                if (i >> j) & 1:
-                    perm.append(nums[j])
-            permutations.append(perm)
-        return permutations
+        ans = []
+        subset = []
+        def dfs(index,nums):
+            if index >= len(nums):
+                ans.append(subset[:])
+                return
+            subset.append(nums[index])
+            dfs(index+1,nums)
+            subset.pop()
+            dfs(index+1,nums)
+        
+        dfs(0,nums)
+        return ans
+            
