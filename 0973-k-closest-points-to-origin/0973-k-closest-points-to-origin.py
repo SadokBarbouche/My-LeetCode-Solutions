@@ -11,6 +11,6 @@ class Solution:
         
         distances.sort(key=lambda x: x[0])
         
-        ans = [i[1] for i in distances]
+        ans = [i[1] for i in distances][:k]
         
-        return ans[:k]
+        return ans
