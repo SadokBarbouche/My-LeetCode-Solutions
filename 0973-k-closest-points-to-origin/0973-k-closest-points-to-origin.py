@@ -1,16 +1,12 @@
 class Solution:
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
         import heapq
-        
-        def euclideanDistance(points):
-            return sqrt( points[0] ** 2 + points[1] ** 2 )
-        
+        def euclideanDistance(point):
+            return point[0] ** 2 + point[1] ** 2
         distances = []
         for point in points:
-            distances.append((euclideanDistance(point) , point))
-        
-        distances.sort(key=lambda x: x[0])
-        
-        ans = [i[1] for i in distances][:k]
-        
-        return ans
+            heapq.heappush(distances, (euclideanDistance(point), point))
+        k_closest = []
+        for _ in range(k):
+            k_closest.append(heapq.heappop(distances)[1])
+        return k_closest
