@@ -12,6 +12,6 @@ class Solution:
             remaining = heaviest - heavier
             heapq.heappush(max_heap, -remaining)
             
-        return -max_heap[0]
+        return -max_heap[0] if max_heap else 0
             
             
