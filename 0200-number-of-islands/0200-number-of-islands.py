@@ -14,15 +14,14 @@ class Solution:
             dfs(grid, sr - 1, sc, visited)            
             dfs(grid, sr, sc + 1, visited)
             dfs(grid, sr, sc - 1, visited)
-            
-            # Do not remove (sr, sc) from visited here
+
             
         nIslands = 0
         visited = set()
         
         for r in range(len(grid)):
             for c in range(len(grid[0])):
-                if grid[r][c] == '1' and (r, c) not in visited:  # Add a check to avoid redundant DFS calls
+                if grid[r][c] == '1' and (r, c) not in visited:
                     dfs(grid, r, c, visited)
                     nIslands += 1
                     
