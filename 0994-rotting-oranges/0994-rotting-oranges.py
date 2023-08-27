@@ -5,7 +5,6 @@ class Solution:
         visited = set()
         queue = deque()
                     
-        # Number of fresh oranges and rotten oranges
         freshOranges = 0
         for i in range(len(grid)):
             for j in range(len(grid[0])):
@@ -20,8 +19,8 @@ class Solution:
             neighbors = [[0, 1], [0, -1], [-1, 0], [1, 0]]
             time = 0
             while queue:
-                print(f'queue = {queue}')
-                print(f'visited = {visited}')
+                # print(f'queue = {queue}')
+                # print(f'visited = {visited}')
                 for _ in range(len(queue)):
                     r, c = queue.popleft()
                     for dr, dc in neighbors:
