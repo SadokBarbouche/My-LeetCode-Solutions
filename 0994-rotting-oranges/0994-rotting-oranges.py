@@ -1,5 +1,3 @@
-from collections import deque
-
 class Solution:
     def orangesRotting(self, grid: List[List[int]]) -> int:
         ROWS = len(grid)
@@ -36,8 +34,6 @@ class Solution:
                             
                 time += 1
                 
-            print(f'remaining fresh oranges : {freshOranges}')
-            print(f'time : {time}')
 
             return time - 1  if freshOranges == 0 else -1
             
