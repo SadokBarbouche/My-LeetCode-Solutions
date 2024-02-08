@@ -26,3 +26,4 @@ class Solution:
                 dp[i] = min(dp[i], dp[i - square] + 1)
         
         return dp[n]
+    
