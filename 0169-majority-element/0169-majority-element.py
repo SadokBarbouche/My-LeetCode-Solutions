@@ -1,14 +1,12 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        d = dict()
+        d = {}
         for i in nums:
             if i in d:
                 d[i] += 1
             else:
                 d[i] = 1
-        
+        inv_map = {v: k for k, v in d.items()}
         argmax = max(d.values())
-        for i,j in d.items():
-            if j == argmax:
-                return i
-        return 0
+        
+        return inv_map[argmax]
