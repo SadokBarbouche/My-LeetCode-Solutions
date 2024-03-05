@@ -7,4 +7,4 @@ class Solution:
                 left += 1
             while right >= left and s[right] == curr:
                 right -= 1
-        return right - left + 1 if left <= right else 0
+        return max(right - left + 1,0)
