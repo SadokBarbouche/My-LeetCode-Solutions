@@ -9,6 +9,6 @@ class Solution:
             if curr_count in count:
                 max_len = max(max_len, i - count[curr_count])
             else:
-                count[curr_count] = i
+                count[curr_count] = i 
 
         return max_len
