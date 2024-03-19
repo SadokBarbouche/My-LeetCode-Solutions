@@ -4,6 +4,7 @@ class Solution:
         ans = []
         while count:
             most_common_tasks = count.most_common(n + 1)
+            # print(f'most_common_tasks : {most_common_tasks}')
             for task, freq in most_common_tasks:
                 ans.append(task)
                 count[task] -= 1
@@ -13,4 +14,5 @@ class Solution:
                 break
             while len(ans) % (n + 1) != 0:
                 ans.append('idle')
+            # print(f'ans = {ans}')
         return len(ans)
