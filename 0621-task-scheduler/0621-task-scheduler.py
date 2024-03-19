@@ -11,7 +11,7 @@ class Solution:
                 if count[task] == 0:
                     del count[task]
             if not count:
-                break
+                return len(ans)
             while len(ans) % (n + 1) != 0:
                 ans.append('idle')
             # print(f'ans = {ans}')
