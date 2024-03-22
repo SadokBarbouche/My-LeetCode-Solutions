@@ -16,8 +16,8 @@ class Solution:
         
         n = len(values)
         
-        for i in range(n // 2):
-            if values[i] != values[n- 1 - i]:
+        for _ in range(n // 2):
+            if values[_] != values[n- 1 - _]:
                 return False
             
         return True
