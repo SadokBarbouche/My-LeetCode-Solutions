@@ -13,8 +13,11 @@ class Solution:
         while head:
             values.append(head.val)
             head = head.next
-            
-        if values == values[::-1]:
-            return True
         
-        return False
+        n = len(values)
+        
+        for i in range(n // 2):
+            if values[i] != values[n- 1 - i]:
+                return False
+            
+        return True
