@@ -1,3 +1,8 @@
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
         """
@@ -9,7 +14,7 @@ class Solution:
         temp = head
         elements = []
         while temp:
-            elements.append(temp.val) 
+            elements.append(temp.val)
             temp = temp.next
         n = len(elements)
         i, j = 0, n - 1
