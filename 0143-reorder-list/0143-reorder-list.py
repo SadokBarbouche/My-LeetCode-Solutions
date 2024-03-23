@@ -28,3 +28,4 @@ class Solution:
             j -= 1
         if i == j:
             temp_head.val = elements[i]
+        del elements
