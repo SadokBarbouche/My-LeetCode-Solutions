@@ -4,10 +4,7 @@ class Solution:
         for i in nums:
             if i in counter:
                 counter[i]+=1
+                return i
             else:
                 counter[i]=1
-        
-        for i in nums:
-            if counter[i]>1:
-                return i
-        return -1
+        return -1        
