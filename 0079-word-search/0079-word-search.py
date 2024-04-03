@@ -13,7 +13,6 @@ class Solution(object):
         if len(word) == 1:
             return True
         
-        board[i][j] = board[i][j]
         temp = board[i][j]
         board[i][j] = -1
 
