@@ -2,6 +2,7 @@ class Solution:
     def checkValidString(self, s: str) -> bool:
         stack = []
         stars = []
+        
         for i, char in enumerate(s):
             if char == '*':
                 stars.append(i)
@@ -15,9 +16,11 @@ class Solution:
                         stars.pop()
                     else:
                         return False
+        
         while stars and stack:
             if stars[-1] < stack[-1]:
                 return False
-            stack.pop();stars.pop()
+            stack.pop()
+            stars.pop()
         
         return not stack
