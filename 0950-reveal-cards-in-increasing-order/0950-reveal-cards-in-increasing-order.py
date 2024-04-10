@@ -1,6 +1,6 @@
 class Solution:
     def deckRevealedIncreasing(self, deck: List[int]) -> List[int]:
-        deck.sort()
+        deck = sorted(deck)
         n = len(deck)
         ans = [0] * n
         indices = deque(range(n))
