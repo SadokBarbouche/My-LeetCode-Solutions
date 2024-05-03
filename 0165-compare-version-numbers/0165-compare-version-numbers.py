@@ -12,5 +12,5 @@ class Solution:
         bigger = v1 if len(v1) > len(v2) else v2
         for i in bigger[counter:]:
             if int(i) != 0:
-                return 1 if bigger is v1 else -1
+                return 1 if bigger == v1 else -1
         return 0
