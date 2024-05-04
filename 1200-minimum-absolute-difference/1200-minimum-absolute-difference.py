@@ -2,8 +2,7 @@ from typing import List
 
 class Solution:
     def minimumAbsDifference(self, arr: List[int]) -> List[List[int]]:
-        import math
-        diff = math.inf
+        diff = 1e6
         arr.sort()
         z = zip(arr, arr[1:])
         for i, j in z:
